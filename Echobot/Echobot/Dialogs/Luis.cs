@@ -27,8 +27,8 @@ namespace Echobot.Dialogs
                 var queryString = HttpUtility.ParseQueryString(string.Empty);
 
                 // This app ID is for a public sample app that recognizes requests to turn on and turn off lights
-                var luisAppId = "blah";
-                var subscriptionKey = "blah";
+                var luisAppId = "28312010-8d4c-49bd-b0bd-63c5a4d67311";
+                var subscriptionKey = "2299b95aa00b41688558f2ae41d7a3b0";
 
                 // The request header contains your subscription key
                 client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", subscriptionKey);
@@ -49,7 +49,7 @@ namespace Echobot.Dialogs
                     queryString["spellCheck"] = "false";
                     queryString["staging"] = "false";
 
-                    var uri = "https://" + luisAppId + "?" + queryString;
+                    var uri = "https://westus.api.cognitive.microsoft.com/luis/v2.0/apps/" + luisAppId + "?" + queryString;
                     var response = await client.GetAsync(uri);
 
                     var strResponseContent = await response.Content.ReadAsStringAsync();
@@ -105,7 +105,6 @@ namespace Echobot.Dialogs
             }
             catch (IOException IOEerror) { }
             return;
-
             }
 
 

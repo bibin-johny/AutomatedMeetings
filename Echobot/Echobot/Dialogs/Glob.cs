@@ -9,8 +9,8 @@ namespace Echobot.Dialogs
     {
         public static bool speechthreadcontrol=false;
         public static string Actionpalns;
-        public static int speakercontroller;
         public static int actioncount = 0;
-        public static bool synthesisorcontroller = false;
+        public static string outfile;
+        public static string resfile;
     }
 }

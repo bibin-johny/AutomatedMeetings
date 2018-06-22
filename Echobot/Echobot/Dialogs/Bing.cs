@@ -51,6 +51,14 @@ namespace Echobot.Dialogs
                         txt.Close();
                     }
                     catch (IOException error) { }
+
+                    try
+                    {
+                        TextWriter txt = new StreamWriter("D:\\Output\\Outputwithtime.txt", true);
+                        txt.Write(" "+ DateTime.Now.ToString("h:mm:ss")+" " + result);
+                        txt.Close();
+                    }
+                    catch (IOException error) { }
                 }
             }
             else
