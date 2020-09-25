@@ -51,7 +51,8 @@ if __name__ == "__main__":
         print('Usage: python DeleteProfile.py <subscription_key> <profile_id> ')
         print('\t<subscription_key> is the subscription key for the service')
         print('\t<profile_id> the ID for a profile to delete from the sevice')
-        sys.exit('Error: Incorrect usage.')
+        if subscription_key == null:
+		sys.exit('Error: Incorrect Key.')
     
     delete_profile(sys.argv[1], sys.argv[2])
     
