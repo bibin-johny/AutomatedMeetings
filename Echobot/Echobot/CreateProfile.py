@@ -51,6 +51,7 @@ if __name__ == "__main__":
     if len(sys.argv) < 2:
         print('Usage: python CreateProfile.py <subscription_key>')
         print('\t<subscription_key> is the subscription key for the service')
-        sys.exit('Error: Incorrect Usage.')
+        if subscription_key == null:
+            sys.exit('Error: Incorrect Key.')
 
     create_profile(sys.argv[1], 'en-us')
